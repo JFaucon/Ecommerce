@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function ListCart({cart, removeFromCart})
+export default function ListCart({cart, removeFromCart, addToCart,Products})
 {
     return (
         <>
@@ -10,6 +10,7 @@ export default function ListCart({cart, removeFromCart})
                     <p>{item.price}€</p>
                     <p>Quantité : {item.quantity}</p>
                     <button onClick={() => removeFromCart(item)}>retirer</button>
+                    <button onClick={() => addToCart(item)} disabled={Products.find(p => p.id === item.id) && Products.find(p => p.id === item.id).quantity === 0}>ajouter</button>
                 </div>
             ))}
         </>

@@ -83,7 +83,7 @@ function App() {
         </div>
       </div>
       <div className='container-2'>
-        <Cart cart={cart} removeFromCart={removeFromCart}/>
+        <Cart cart={cart} Products={Product} removeFromCart={removeFromCart} addToCart={addToCart}/>
       </div>
     </>
   )
